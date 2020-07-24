@@ -9,7 +9,9 @@ const products = [
 const getAllPropValues = function (arr, prop) {
   const names = [];
   for (let product of arr) {
-    product[prop] !== undefined ? names.push(product[prop]) : false;
+    if (product[prop] !== undefined) {
+      names.push(product[prop]);
+    }
   }
   return names;
 };

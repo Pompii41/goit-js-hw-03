@@ -6,11 +6,11 @@ const user = {
   hobby: "html",
   premium: true,
 };
-const userChanges = function (mood, hobby, premium) {
-  user.mood = mood;
-  user.hobby = hobby;
-  user.premium = premium;
+const userChanges = function (obj, key, value) {
+  obj[key] = value;
 };
 
-userChanges("happy", "skydiving", false);
+userChanges(user, "mood", "happy");
+userChanges(user, "hobby", "skydiving");
+userChanges(user, "premium", false);
 console.table(user);
